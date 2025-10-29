@@ -383,12 +383,17 @@
     </div>
 </section>
 
+
+
 <section id="map" class="section-padding">
     <div class="text-center">
         <h3>How do I get there?</h3>
         <p>It's way easier than you think!</p>
     </div>
-    <div id="map-canvas"></div>
+    <iframe class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d520128.0756939229!2d80.77955700000001!3d26.629505!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c09b1ad6ba5cf%3A0xe31a8e45e0d573ee!2sAnandi%20Magic%20World%20Water%20Park%20In%20Lucknow!5e1!3m2!1sen!2sus!4v1743787271391!5m2!1sen!2sus"
+            referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
     <div id="map-content-wrapper" class="container pointer-events-none">
         <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
@@ -524,8 +529,6 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
 <!-- Google Analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {
