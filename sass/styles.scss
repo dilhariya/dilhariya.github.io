@@ -313,6 +313,15 @@ Hero
           gap: 0.5em;
       }
   }
+
+  .rsvp-container {
+      margin-top: 10px;
+
+      .rsvp-btn {
+          text-shadow: 1px 1px black;
+          font-size: 1em;
+      }
+  }
 }
 .navigation {
   transition: all 300ms ease-in-out;
@@ -843,7 +852,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-key {
+      i.fa-user, i.fa-users, i.fa-envelope, .fa-key, .fa-phone {
         font-size: 14px;
         position: absolute;
         top: 50%;
