@@ -10,7 +10,7 @@ function countdownTimer() {
     document.getElementById('countdown-completion-message').classList.remove('hidden');
     document.getElementById('timer').classList.add('hidden');
     clearInterval(countdownInterval);
-    return;
+    return false;
   }
 
   const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -27,12 +27,15 @@ function countdownTimer() {
   hoursElement.textContent = hours;
   minutesElement.textContent = minutes;
   secondsElement.textContent = seconds;
+
+  return true;
 }
 
 function startCountdown() {
-  countdownTimer();
-  document.getElementById('timer').classList.remove('hidden');
-  countdownInterval = setInterval(countdownTimer, 1000);
+  if (countdownTimer()) {
+    document.getElementById('timer').classList.remove('hidden');
+    countdownInterval = setInterval(countdownTimer, 1000);
+  }
 }
 
 startCountdown();
