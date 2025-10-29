@@ -270,6 +270,7 @@ Hero
   h1 {
     color: $txt-light;
     margin-bottom: 40px;
+    text-shadow: 1px 1px black;
   }
   p.intro {
     color: $txt-light;
@@ -288,6 +289,8 @@ Hero
   .countdown {
       color: $txt-light;
       font-size: 1.7em;
+      font-weight: 500;
+      text-shadow: 1px 1px black;
 
       .completion-message {
           font-size: 2em;
