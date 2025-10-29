@@ -273,10 +273,14 @@ Hero
   .down-arrow a {
     color: $txt-light;
   }
-  h1 {
+  .hero-title {
     color: $txt-light;
+    font-size: 3em;
     margin-bottom: 40px;
     text-shadow: 1px 1px black;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
   }
   .red {
       color: red;
@@ -289,10 +293,6 @@ Hero
   }
   .hero-content {
     padding-top: 40%;
-  }
-  .hero-content img {
-    width: 55%;
-    margin-bottom: 12%;
   }
 
   .countdown {
@@ -323,6 +323,13 @@ Hero
       }
   }
 }
+
+@media (max-width: 576px) {
+    .hero .hero-title {
+        flex-direction: column;
+    }
+}
+
 .navigation {
   transition: all 300ms ease-in-out;
   position: fixed;
