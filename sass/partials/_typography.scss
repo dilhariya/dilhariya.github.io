@@ -1,5 +1,5 @@
 // Typography partial
-@import "partials/colors";
+@use "partials/colors";
 
 // Fonts
 
@@ -41,7 +41,7 @@ Typography
 p {
   font-size: $font-size-p;
   line-height: $base-line-height;
-  color: $txt-primary;
+  color: colors.$txt-primary;
   padding-bottom: 20px;
 }
 
@@ -52,11 +52,11 @@ h1 {
 h2 {
   font-size: $font-size-h2;
   font-weight: $light;
-  color: $h2-color;
+  color: colors.$h2-color;
 }
 
 h3 {
-  color: $h3-color;
+  color: colors.$h3-color;
   font-size: $font-size-h4;
   font-weight: $bold;
   text-transform: uppercase;
@@ -70,7 +70,7 @@ h4 {
 
 h5 {
   font-size: $font-size-h5;
-  color: $h5-color;
+  color: colors.$h5-color;
   text-transform: uppercase;
   font-weight: $semibold;
 }

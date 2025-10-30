@@ -1,10 +1,11 @@
 // Layout variables partial
+@use "partials/colors";
 
 $section-padding: 40px 0;
 
 section.intro, section.features-extra, section.rsvp {
-	background: $section-light;
+	background: colors.$section-light;
 }
 section.features, section.events, section.blog {
-	background: $section-dark;
+	background: colors.$section-dark;
 }
