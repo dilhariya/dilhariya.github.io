@@ -547,6 +547,30 @@ header .member-actions {
 }
 
 /* ==========================================================================
+Notification
+========================================================================== */
+.notification-container {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-content {
+  background-color: #e8ca6f;
+  border: 1px solid #E6E9EA;
+  border-radius: 15px;
+  padding: 15px;
+  color: #fff;
+  font: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+/* ==========================================================================
 Install Button
 ========================================================================== */
 .floating-button-container {

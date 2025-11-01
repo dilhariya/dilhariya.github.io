@@ -425,6 +425,30 @@ header {
   transform: translateX(-50%);
 }
 
+/* ==========================================================================
+Notification
+========================================================================== */
+
+.notification-container {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-content {
+    background-color: colors.$accent-color;
+    border: 1px solid colors.$keyline-color;
+    border-radius: 15px;
+    padding: 15px;
+    color: colors.$txt-light;
+    font: typography.$sans-serif;
+    font-size: typography.$font-size-h4;
+}
 
 /* ==========================================================================
 Install Button

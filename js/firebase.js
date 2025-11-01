@@ -1,6 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
-import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-messaging.js";
+import {
+  getMessaging,
+  getToken,
+  onMessage,
+} from "https://www.gstatic.com/firebasejs/12.5.0/firebase-messaging.js";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -19,10 +23,10 @@ const app = initializeApp(firebaseConfig);
 const messaging = getMessaging(app);
 
 function requestPermission() {
-  console.log('Requesting permission...');
+  console.log("Requesting permission...");
   Notification.requestPermission().then((permission) => {
-    if (permission === 'granted') {
-      console.log('Notification permission granted.');
+    if (permission === "granted") {
+      console.log("Notification permission granted.");
       console.log(permission);
     }
   });
@@ -38,3 +42,8 @@ if (token) {
 } else {
   requestPermission();
 }
+
+onMessage(messaging, (payload) => {
+  console.log("Message received: " + JSON.stringify(payload));
+  notify(payload["notification"]["body"]);
+});
