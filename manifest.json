@@ -30,7 +30,7 @@
       "name": "View the schedule",
       "short_name": "Events",
       "description": "View the schedule of the wedding functions.",
-      "url": "#events?source=pwa",
+      "url": "?source=pwa#events",
       "icons": [
         {
           "src": "android-chrome-192x192.png",
