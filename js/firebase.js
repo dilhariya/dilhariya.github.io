@@ -33,11 +33,16 @@ function requestPermission() {
 }
 
 function postToken(token) {
-  const url = "https://script.google.com/macros/s/AKfycbypxN13MNpfiWDlhoaIT7w_kja3r20eBYjZJCX9RX9dGsVKe-vFIIO9uITkiRKP1BxA/exec";
+  const url =
+    "https://script.google.com/macros/s/AKfycbypxN13MNpfiWDlhoaIT7w_kja3r20eBYjZJCX9RX9dGsVKe-vFIIO9uITkiRKP1BxA/exec";
 
-  $.post(url, { token }).done((data) => {
-    console.log(data);
-  })
+  const data = {
+    token: token,
+    userAgent: navigator.userAgent,
+  };
+  $.post(url, data).done((response) => {
+    console.log(response);
+  });
 }
 
 const token = await getToken(messaging, {
