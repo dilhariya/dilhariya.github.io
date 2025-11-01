@@ -32,6 +32,14 @@ function requestPermission() {
   });
 }
 
+function postToken(token) {
+  const url = "https://script.google.com/macros/s/AKfycbypxN13MNpfiWDlhoaIT7w_kja3r20eBYjZJCX9RX9dGsVKe-vFIIO9uITkiRKP1BxA/exec";
+
+  $.post(url, { token }).done((data) => {
+    console.log(data);
+  })
+}
+
 const token = await getToken(messaging, {
   vapidKey:
     "BBgRhk1T4L5otIVjzb-YleYWih6prGsI-Lm8U14ySe52bNXaFAOQ_iN6uGvweNg4Rlw62I-Esa53-gR9Ljn_ErI",
@@ -39,6 +47,7 @@ const token = await getToken(messaging, {
 
 if (token) {
   console.log("Received firebase messaging token: ", token);
+  postToken(token);
 } else {
   requestPermission();
 }
